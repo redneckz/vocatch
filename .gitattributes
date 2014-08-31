@@ -1,0 +1,17 @@
+* text eol=lf
+*.png binary
+*.PNG binary
+*.jpg binary
+*.jar binary
+*.gif binary
+*.spvchain binary
+*.wallet binary
+*.jar binary
+*.lib binary
+*.so binary
+*.dll binary
+*.exe binary
+*.ico binary
+*.rc2 binary
+*.sys binary
+*.pdf binary

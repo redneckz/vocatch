@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KeyEdit - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/KeyEdit.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEdit.rc"" 
+Creating temporary file "c:\Temp\RSP46ED.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/KeyEdit.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEdit.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEditDlg.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46ED.tmp" 
+Creating temporary file "c:\Temp\RSP46EE.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/KeyEdit.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46EE.tmp" 
+Creating command line "xilink6.exe ..\..\lib\rdevkit.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/KeyEdit.pdb" /debug /machine:I386 /out:"Debug/KeyEdit.exe" /pdbtype:sept  ".\Debug\KeyEdit.obj" ".\Debug\KeyEditDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\KeyEdit.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+KeyEdit.cpp
+KeyEditDlg.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+KeyEdit.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: KeyEdit - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/KeyEdit.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEdit.rc"" 
+Creating temporary file "c:\Temp\RSP46F0.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/KeyEdit.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEdit.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\KeyEditDlg.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46F0.tmp" 
+Creating temporary file "c:\Temp\RSP46F1.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/KeyEdit.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\KeyEdit\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46F1.tmp" 
+Creating command line "xilink6.exe ..\..\lib\rdevkit.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/KeyEdit.pdb" /machine:I386 /out:"Release/KeyEdit.exe"  ".\Release\KeyEdit.obj" ".\Release\KeyEditDlg.obj" ".\Release\StdAfx.obj" ".\Release\KeyEdit.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+KeyEdit.cpp
+KeyEditDlg.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+KeyEdit.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RvcViewer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/RvcViewer.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\RvcViewer.rc"" 
+Creating temporary file "c:\Temp\RSP46B1.tmp" with contents
+[
+/nologo /G5 /MDd /W3 /Gm /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/RvcViewer.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\ControlPageBase.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\ControlPanelDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\GeneralPage.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\GpioPage.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\LoginDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\MainFrm.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\RvcViewer.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\VideoDoc.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\VideoView.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46B1.tmp" 
+Creating temporary file "c:\Temp\RSP46B2.tmp" with contents
+[
+/nologo /G5 /MDd /W3 /Gm /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/RvcViewer.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46B2.tmp" 
+Creating temporary file "c:\Temp\RSP46B3.tmp" with contents
+[
+..\..\lib\rvcl.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/RvcViewer.pdb" /debug /machine:I386 /out:"Debug/RvcViewer.exe" /pdbtype:sept 
+".\Debug\ControlPageBase.obj"
+".\Debug\ControlPanelDlg.obj"
+".\Debug\GeneralPage.obj"
+".\Debug\GpioPage.obj"
+".\Debug\LoginDlg.obj"
+".\Debug\MainFrm.obj"
+".\Debug\RvcViewer.obj"
+".\Debug\StdAfx.obj"
+".\Debug\VideoDoc.obj"
+".\Debug\VideoView.obj"
+".\Debug\RvcViewer.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP46B3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ControlPageBase.cpp
+ControlPanelDlg.cpp
+GeneralPage.cpp
+GpioPage.cpp
+LoginDlg.cpp
+MainFrm.cpp
+RvcViewer.cpp
+VideoDoc.cpp
+VideoView.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+RvcViewer.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RvcViewer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/RvcViewer.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\RvcViewer.rc"" 
+Creating temporary file "c:\Temp\RSP46B5.tmp" with contents
+[
+/nologo /G5 /MD /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/RvcViewer.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\ControlPageBase.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\ControlPanelDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\GeneralPage.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\GpioPage.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\LoginDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\MainFrm.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\RvcViewer.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\VideoDoc.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\VideoView.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46B5.tmp" 
+Creating temporary file "c:\Temp\RSP46B6.tmp" with contents
+[
+/nologo /G5 /MD /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/RvcViewer.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\RvcViewer\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46B6.tmp" 
+Creating temporary file "c:\Temp\RSP46B7.tmp" with contents
+[
+..\..\lib\rvcl.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/RvcViewer.pdb" /machine:I386 /out:"Release/RvcViewer.exe" 
+".\Release\ControlPageBase.obj"
+".\Release\ControlPanelDlg.obj"
+".\Release\GeneralPage.obj"
+".\Release\GpioPage.obj"
+".\Release\LoginDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\RvcViewer.obj"
+".\Release\StdAfx.obj"
+".\Release\VideoDoc.obj"
+".\Release\VideoView.obj"
+".\Release\RvcViewer.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP46B7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ControlPageBase.cpp
+ControlPanelDlg.cpp
+GeneralPage.cpp
+GpioPage.cpp
+LoginDlg.cpp
+MainFrm.cpp
+RvcViewer.cpp
+VideoDoc.cpp
+VideoView.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+RvcViewer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

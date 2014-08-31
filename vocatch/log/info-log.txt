@@ -1,0 +1,2 @@
+Nov 05, 2014 7:58:30 PM com.qbit.vocatch.view.MainFrame$1 propertyChange
+INFO: Цикл запущен.

@@ -1,0 +1,421 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RvcViewer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\RvcViewer.ico"
+IDR_VIDEOWTYPE          ICON                    "res\\VideoDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Whole Frame",                ID_WINDOW_FULL_FRAME
+        MENUITEM "&CIF",                        ID_WINDOW_CIF
+        MENUITEM "&QCIF",                       ID_WINDOW_QCIF
+        MENUITEM SEPARATOR
+        MENUITEM "&Top-Down Image",             ID_IMAGE_TOP_DOWN
+        MENUITEM "&Bottom-Up Image",            ID_IMAGE_BOTTOM_UP
+        MENUITEM SEPARATOR
+        MENUITEM "Deinterlacing filter",        ID_WINDOW_DEINTERLACINGFILTER
+        , CHECKED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About RvcViewer...",         ID_APP_ABOUT
+    END
+    MENUITEM SEPARATOR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 216, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RvcViewer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,169,58,40,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,49,202,1
+    LTEXT           "RvcViewer 2.7\n\nCopyright © PENTACON Corporation, 1995-2005\nWeb: www.cctv.ru",
+                    IDC_STATIC,39,7,170,35,SS_NOPREFIX
+END
+
+IDD_CONTROL_PANEL DIALOGEX 0, 0, 167, 316
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Device:",IDC_STATIC,7,4,26,8
+    COMBOBOX        IDC_COMBO_DEVICES,7,15,153,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tab1",IDC_TAB_PAGES,"SysTabControl32",WS_TABSTOP,7,34,
+                    153,275
+END
+
+IDD_GENERAL_PAGE DIALOGEX 0, 0, 148, 258
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Video Signal",IDC_STATIC,7,7,134,49
+    LTEXT           "&Source:",IDC_STATIC,15,21,26,8
+    COMBOBOX        IDC_COMBO_VIDEO_SOURCE,47,19,88,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Format:",IDC_STATIC,15,38,24,8
+    COMBOBOX        IDC_COMBO_VIDEO_FORMAT,47,36,88,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Digital",IDC_STATIC,7,96,134,155
+    LTEXT           "Fo&rmat:",IDC_STATIC,15,73,24,8
+    COMBOBOX        IDC_COMBO_COLOR_FORMAT,47,71,88,66,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Brightness",IDC_STATIC_BRIGHTNESS_HDR,17,107,34,8
+    CONTROL         "Slider1",IDC_SLIDER_BRIGHTNESS,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,13,118,122,11
+    RTEXT           "000",IDC_STATIC_BRIGHTNESS,117,107,13,8
+    LTEXT           "&Contrast",IDC_STATIC_CONTRAST_HDR,17,131,27,8
+    CONTROL         "Slider1",IDC_SLIDER_CONTRAST,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,13,141,122,11
+    RTEXT           "000",IDC_STATIC_CONTRAST,117,131,13,8
+    LTEXT           "Sa&turation",IDC_STATIC_SATURATION_HDR,17,154,33,8
+    CONTROL         "Slider1",IDC_SLIDER_SATURATION,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,13,165,122,11
+    RTEXT           "000",IDC_STATIC_SATURATION,117,154,13,8
+    LTEXT           "&Hue",IDC_STATIC_HUE_HDR,17,178,14,8
+    CONTROL         "Slider1",IDC_SLIDER_HUE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,13,189,122,11
+    RTEXT           "000",IDC_STATIC_HUE,117,178,13,8
+    PUSHBUTTON      "R&eset",IDC_BUTTON_RESET_ADJUSTMENTS,85,230,45,14
+    LTEXT           "C&omb range",IDC_STATIC_HUE_HDR2,16,203,39,8
+    CONTROL         "",IDC_SLIDER_COMBRANGE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,12,214,122,11
+    RTEXT           "0000",IDC_STATIC_COMBRANGE,116,203,17,8
+END
+
+IDD_GPIO_PAGE DIALOG  0, 0, 148, 230
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "General Purpose I/O &Pins:",IDC_STATIC,7,7,84,8
+    CONTROL         "List1",IDC_LIST_GPIO,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,18,134,165
+    PUSHBUTTON      "Input",IDC_BUTTON_INPUT,7,190,63,14
+    PUSHBUTTON      "Output",IDC_BUTTON_OUTPUT,7,209,63,14
+    PUSHBUTTON      "&Set Bit",IDC_BUTTON_SET,78,190,63,14
+    PUSHBUTTON      "&Reset Bit",IDC_BUTTON_RESET,78,209,63,14
+END
+
+IDD_LOGIN DIALOG  0, 0, 248, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pentacon Developer Kit Login"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Customer Passwords",IDC_STATIC,7,7,234,92
+    CONTROL         "Use Demo Key customer passwords",IDC_RADIO_PASSWORDS1,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,13,43,129,10
+    CONTROL         "Use these customer passwords (hex):",
+                    IDC_RADIO_PASSWORDS2,"Button",BS_AUTORADIOBUTTON,13,62,
+                    133,10
+    EDITTEXT        IDC_EDIT_PASSWORD1,25,78,49,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD2,79,78,49,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD3,131,78,49,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD4,185,78,49,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,135,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,191,106,50,14
+    LTEXT           "You must specify customer passwords to access Pentacon Video Capture Library.",
+                    IDC_STATIC,14,20,220,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_CONTROL_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_GENERAL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_GPIO_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,1
+ PRODUCTVERSION 3,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "PENTACON Corporation"
+            VALUE "FileDescription", "RvcViewer"
+            VALUE "FileVersion", "3, 0, 0, 1"
+            VALUE "InternalName", "RvcViewer"
+            VALUE "LegalCopyright", "Copyright © PENTACON Corporation, 1995-2006"
+            VALUE "OriginalFilename", "RvcViewer.EXE"
+            VALUE "ProductName", "Pentacon Developer Kit"
+            VALUE "ProductVersion", "3, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "RvcViewer\n\nVideoW\n\n\nRvcViewer.Document\nVideoW Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "RvcViewer"
+    AFX_IDS_IDLEMESSAGE     "Done"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_FULL_FRAME    "Full screen image"
+    ID_WINDOW_CIF           "CIF size image"
+    ID_WINDOW_QCIF          "QCIF size image"
+    ID_IMAGE_TOP_DOWN       "Top-Down Image"
+    ID_IMAGE_BOTTOM_UP      "Bottom-Up Image"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_RVCL_INIT_FAILED "Can not initialize RVCL library. %s (%#x)"
+    IDS_ERR_NO_DEVICES      "No one video capture device has been found."
+    IDS_ERR_CANT_GET_DEVICE_INFO "Can not get device info. %s (%#x)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR               "Error"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERR_CANT_SET_VIDEO_SOURCE 
+                            "Can not set up video input %u for device %s. %s (%#x)"
+    IDS_ERR_CANT_SET_VIDEO_FORMAT 
+                            "Can not set up video signal %s format for device %s. %s (%#x)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VF_NTSC_M           "NTSC (M)"
+    IDS_VF_NTSC_J           "NTSC (Japan)"
+    IDS_VF_PAL_BDGHI        "PAL (B,D,G,H,I)"
+    IDS_VF_PAL_M            "PAL (M)"
+    IDS_VF_PAL_N            "PAL (N)"
+    IDS_VF_SECAM            "SECAM"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CF_RGB32            "RGB32 (True Color)"
+    IDS_CF_RGB24            "RGB24 (True Color)"
+    IDS_CF_RGB16            "RGB16"
+    IDS_CF_RGB15            "RGB15 (High Color)"
+    IDS_CF_YUV422_PACKED    "YUV 4:2:2 Packed"
+    IDS_CF_YUV411_PACKED    "YUV 4:1:1 Packed"
+    IDS_CF_YUV422_PLANAR    "YUV 4:2:2 Planar"
+    IDS_CF_YUV411_PLANAR    "YUV 4:1:1 Planar"
+    IDS_CF_YUV420_PLANAR    "YUV 4:2:0 Planar"
+    IDS_CF_Y8               "B/W"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FULL_DEVICE_NAME    "Device %u (%s, bus %u, slot %u)"
+    IDS_VIDEO_SOURCE        "input %u"
+    IDS_NO_SIGNAL           "NO SIGNAL"
+    IDS_GPIO_PIN            "Pin #"
+    IDS_GPIO_DATA           "Data"
+    IDS_GPIO_MODE           "Pin Mode"
+    IDS_INPUT               "Input"
+    IDS_OUTPUT              "Output"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PAGE_GENERAL        "General"
+    IDS_PAGE_GPIO           "GPIO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\RvcViewer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

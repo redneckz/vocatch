@@ -1,0 +1,40 @@
+body {
+    font-family: monospace;
+    font-size: large;
+}
+
+h1 {
+    color: #8F1000;
+    font-size: xx-large;
+    text-align: center;
+}
+h2 {
+    color: #AF3000;
+    font-size: x-large;
+    text-align: center;
+}
+h3 {
+    color: #AF3000;
+    font-size: large;
+    text-align: center;
+}
+
+a {
+    color: #101010;
+    font-size: large;
+}
+
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+
+pre {
+    color: #009000;
+}
+
+table {
+    font-size: large;
+}

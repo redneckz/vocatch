@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Avi", "Avi\Avi.vcproj", "{86CF8760-C581-4B46-8562-FD5608577BA1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Capture", "Capture\Capture.vcproj", "{18E8ACCC-D083-46BE-AE58-63E6C078F618}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RdvpViewerMain", "RdvpViewerMain\RdvpViewerMain.vcproj", "{D6BF9380-007B-4478-8C77-005A5BF33523}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{86CF8760-C581-4B46-8562-FD5608577BA1}.Debug.ActiveCfg = Debug|Win32
+		{86CF8760-C581-4B46-8562-FD5608577BA1}.Debug.Build.0 = Debug|Win32
+		{86CF8760-C581-4B46-8562-FD5608577BA1}.Release.ActiveCfg = Release|Win32
+		{86CF8760-C581-4B46-8562-FD5608577BA1}.Release.Build.0 = Release|Win32
+		{18E8ACCC-D083-46BE-AE58-63E6C078F618}.Debug.ActiveCfg = Debug|Win32
+		{18E8ACCC-D083-46BE-AE58-63E6C078F618}.Debug.Build.0 = Debug|Win32
+		{18E8ACCC-D083-46BE-AE58-63E6C078F618}.Release.ActiveCfg = Release|Win32
+		{18E8ACCC-D083-46BE-AE58-63E6C078F618}.Release.Build.0 = Release|Win32
+		{D6BF9380-007B-4478-8C77-005A5BF33523}.Debug.ActiveCfg = Debug|Win32
+		{D6BF9380-007B-4478-8C77-005A5BF33523}.Debug.Build.0 = Debug|Win32
+		{D6BF9380-007B-4478-8C77-005A5BF33523}.Release.ActiveCfg = Release|Win32
+		{D6BF9380-007B-4478-8C77-005A5BF33523}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

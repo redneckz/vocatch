@@ -1,0 +1,117 @@
+;
+; rgbt8xx.inf -- setup file
+;
+; Copyright (c) 2003-2006 
+; Manufacturer: PENTACON Corporation
+
+ 
+[Version] 
+Signature = "$Windows NT$" 
+Class=Media
+ClassGUID={4d36e96c-e325-11ce-bfc1-08002be10318} 
+Provider=%ROSSI% 
+CatalogFile=rgcx2388x.cat
+DriverVer= 07/16/2006,4.1.0.7
+
+[DestinationDirs] 
+rg_video.Files.x86_12 = 12
+rg_audio.Files.x86_12 = 12
+
+[SourceDisksNames.x86]
+0=%Desc_x860%
+
+
+[SourceDisksFiles.x86]
+Rgcx2388x.sys=0,, 
+
+[Manufacturer] 
+%ROSSI%=ROSSI
+
+[ROSSI]
+%rg_videoDesc_cx2388x%=rg_video_Inst,PCI\VEN_14f1&DEV_8800
+
+%rg_audioDesc_cx23880%=rg_audio_Inst,PCI\VEN_14f1&DEV_8801
+%rg_audioDesc_cx23881%=rg_audio_Inst,PCI\VEN_14f1&DEV_8811
+
+[rg_video_Inst.ntx86] 
+CopyFiles = rg_video.Files.x86_12 
+
+[rg_video_Inst.ntx86.Services] 
+AddService = Rgcx2388x,0x00000002,rg_video_Service_Instx86, rg_video_EventLog_Inst 
+
+[rg_video_Service_Instx86] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\Rgcx2388x.sys 
+
+
+;[rg_video_Inst.ntx86.Interfaces] 
+;AddInterface ={760A7B21-B3A7-4942-9F12-BF90A90022DB},,rg_video_ntx86Interface0
+;[rg_video_ntx86Interface0]
+
+[rg_video.Files.x86_12] 
+Rgcx2388x.sys
+
+[rg_video_EventLog_Inst] 
+AddReg = rg_video_EventLog_Inst.AddReg 
+ 
+[rg_video_EventLog_Inst.AddReg] 
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll" 
+HKR,,TypesSupported,%REG_DWORD%,7
+
+;/////audio//////
+[rg_audio_Inst.ntx86] 
+CopyFiles = rg_audio.Files.x86_12 
+
+[rg_audio_Inst.ntx86.Services] 
+AddService = Rgcx2388x,0x00000002,rg_audio_Service_Instx86, rg_audio_EventLog_Inst 
+
+[rg_audio_Service_Instx86] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\Rgcx2388x.sys 
+
+
+;[rg_audio_Inst.ntx86.Interfaces] 
+;AddInterface ={4F0B4E08-D931-46e6-84B0-43980310023F},,rg_audio_ntx86Interface0
+;[rg_audio_ntx86Interface0]
+
+[rg_audio.Files.x86_12] 
+Rgcx2388x.sys
+
+[rg_audio_EventLog_Inst] 
+AddReg = rg_audio_EventLog_Inst.AddReg 
+ 
+[rg_audio_EventLog_Inst.AddReg] 
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll" 
+HKR,,TypesSupported,%REG_DWORD%,7
+
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+ROSSI= "PENTACON Corporation" 
+Desc_x860= "PENTACON Corporation Multimedia driver" 
+rg_videoDesc_cx2388x="PENTACON Generic cx2388x Video Capture Device"
+
+rg_audioDesc_cx23880="PENTACON Generic cx23880 Audio Capture Device"
+rg_audioDesc_cx23881="PENTACON Generic cx23881 Audio Capture Device"
+
+;  *******Non Localizable Strings******* 
+
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

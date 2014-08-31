@@ -1,0 +1,109 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MultiScreen - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/MultiScreen.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreen.rc"" 
+Creating temporary file "c:\Temp\RSP46E3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MultiScreen.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\CaptureDevice.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\LoginDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MainFrm.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreen.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreenView.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46E3.tmp" 
+Creating temporary file "c:\Temp\RSP46E4.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MultiScreen.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46E4.tmp" 
+Creating temporary file "c:\Temp\RSP46E5.tmp" with contents
+[
+..\..\lib\rvcl.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MultiScreen.pdb" /debug /machine:I386 /out:"Debug/MultiScreen.exe" /pdbtype:sept 
+".\Debug\CaptureDevice.obj"
+".\Debug\LoginDlg.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MultiScreen.obj"
+".\Debug\MultiScreenView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MultiScreen.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP46E5.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CaptureDevice.cpp
+LoginDlg.cpp
+MainFrm.cpp
+MultiScreen.cpp
+MultiScreenView.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+MultiScreen.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: MultiScreen - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/MultiScreen.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreen.rc"" 
+Creating temporary file "c:\Temp\RSP46E7.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MultiScreen.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\CaptureDevice.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\LoginDlg.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MainFrm.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreen.cpp"
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\MultiScreenView.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46E7.tmp" 
+Creating temporary file "c:\Temp\RSP46E8.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/MultiScreen.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\PENTACON Developer Kit\examples\MultiScreen\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP46E8.tmp" 
+Creating temporary file "c:\Temp\RSP46E9.tmp" with contents
+[
+..\..\lib\rvcl.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/MultiScreen.pdb" /machine:I386 /out:"Release/MultiScreen.exe" 
+".\Release\CaptureDevice.obj"
+".\Release\LoginDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\MultiScreen.obj"
+".\Release\MultiScreenView.obj"
+".\Release\StdAfx.obj"
+".\Release\MultiScreen.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP46E9.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CaptureDevice.cpp
+LoginDlg.cpp
+MainFrm.cpp
+MultiScreen.cpp
+MultiScreenView.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+MultiScreen.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

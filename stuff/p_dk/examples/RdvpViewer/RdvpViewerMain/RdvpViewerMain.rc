@@ -1,0 +1,293 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\RdvpViewerMain.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\RdvpViewer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RdvpViewer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "RdvpViewer Version 2.5",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "© PENTACON Corporation, 1995-2005",IDC_STATIC,40,25,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_RDVPVIEWER_DIALOG DIALOGEX 0, 0, 260, 228
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "DVPack Control Panel"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Source Video Stream Format",IDC_STATIC,7,7,182,51,
+                    BS_LEFT
+    LTEXT           "Source Resolution:",IDC_STATIC,14,22,61,8
+    COMBOBOX        IDC_COMBO_SRCREZ,97,20,84,90,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Source Color Format:",IDC_STATIC,14,39,67,8
+    COMBOBOX        IDC_COMBO_SRCCF,97,38,84,74,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Destination Video Stream Format",IDC_STATIC,7,62,182,51,
+                    BS_LEFT
+    LTEXT           "Destination  Resolution:",IDC_STATIC,14,77,76,8
+    COMBOBOX        IDC_COMBO_DSTREZ,97,75,84,79,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Destination Color Format:",IDC_STATIC,14,94,80,8
+    COMBOBOX        IDC_COMBO_DSTCF,97,93,84,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Compressor Parameters",IDC_STATIC,7,117,182,51,BS_LEFT
+    LTEXT           "Quality:",IDC_STATIC_QUAL,14,130,80,10
+    CONTROL         "Slider2",IDC_SLIDER_QUAL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,97,130,84,10
+    LTEXT           "Sensitivity:",IDC_STATIC_SENSE,14,149,80,9
+    CONTROL         "Slider2",IDC_SLIDER_SENSE,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,97,149,84,10
+    PUSHBUTTON      "Start",IDC_BUTTON_START,198,7,55,14
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,198,26,55,14,WS_DISABLED
+    PUSHBUTTON      "Options...",IDC_BUTTON_OPTIONS,198,45,55,14
+    LTEXT           "0.0 ms",IDC_STATIC_COMPTIME,97,176,86,8
+    LTEXT           "0.0 ms",IDC_STATIC_DECTIME,97,188,86,8
+    LTEXT           "0 Kb",IDC_STATIC_FRAMESIZE,97,200,86,8
+    LTEXT           "1 : 1",IDC_STATIC_COMPRESSION,97,212,86,8
+    PUSHBUTTON      "Close",IDCANCEL,198,207,55,14
+    LTEXT           "Average Compress Time:",IDC_STATIC,7,176,80,8
+    LTEXT           "Average Decompress Time:",IDC_STATIC,7,188,88,8
+    LTEXT           "Average Frame Size:",IDC_STATIC,7,200,66,8
+    LTEXT           "Average Compress Ratio:",IDC_STATIC,7,212,81,8
+END
+
+IDD_DIALOG_SOURCE DIALOG  0, 0, 186, 122
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Video Source"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Live Video",IDC_RADIO_LIVE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,22,49,10
+    CONTROL         "Avi File",IDC_RADIO_AVI,"Button",BS_AUTORADIOBUTTON,14,
+                    62,39,10
+    DEFPUSHBUTTON   "OK",IDOK,74,101,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,101,50,14
+    LTEXT           "Select Video Source:",IDC_STATIC,7,7,68,8
+    LTEXT           "Use RVCL library to capture live video stream.",
+                    IDC_STATIC,26,35,136,23
+    LTEXT           "Read video stream from AVI file.",IDC_STATIC,26,75,136,
+                    11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,0,2
+ PRODUCTVERSION 2,5,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "PENTACON Corporation"
+            VALUE "FileDescription", "RdvpViewer MFC Application"
+            VALUE "FileVersion", "2, 5, 0, 2"
+            VALUE "InternalName", "RdvpViewer"
+            VALUE "LegalCopyright", "© PENTACON Corporation, 1995-2005"
+            VALUE "OriginalFilename", "RdvpViewer.EXE"
+            VALUE "ProductName", "RdvpViewer Application"
+            VALUE "ProductVersion", "2, 5, 0, 2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_RDVPVIEWER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        VERTGUIDE, 14
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_DIALOG_SOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        VERTGUIDE, 14
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+IDB_BITMAP2             BITMAP                  "res\\bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About RdvpViewer..."
+    IDS_REZ                 "%ix%i"
+    IDS_CF                  "%s"
+    IDS_192x144             "192x144"
+    IDS_384x288             "384x288"
+    IDS_CF_RGB32            "RGB32"
+    IDS_CF_RGB24            "RGB24"
+    IDS_CF_YUV              "YUV411PACKED"
+    IDS_CF_Y8               "Y8 (Grayscale)"
+    IDS_ERROR               "Error"
+    IDS_ERROR_DLLLOAD_CAPTURE "Can't load ""Capture.dll"""
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_DLLLOAD_AVI   "Can't load ""Avi.dll"""
+    IDS_ERROR_DLLLOADEXPORT "Wrong dll versions"
+    IDS_ERROR_DESTINATIONSIZE 
+                            "Please, choose destination size less or equal to source one."
+    IDS_WARNING             "Warning"
+    IDS_ERROR_CODECERROR    "Operation is not supported. Please, change settings."
+    IDS_CF_YUVPLAN          "YUV411PLANAR"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\RdvpViewerMain.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

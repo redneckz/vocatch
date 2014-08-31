@@ -1,0 +1,14 @@
+; Avi.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Avi"
+DESCRIPTION  'Avi Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	D2CInitialize		@1
+	D2CSetColorFormat	@2
+	D2CSetResolution	@3
+	D2CExitCapture		@4
+	D2CStart			@5
+	D2CStop				@6
+	D2CGetResolution	@7

@@ -1,0 +1,127 @@
+;
+; rgbt8xx.inf -- setup file
+;
+; Copyright (c) 2004 
+; Manufacturer: PENTACON Corporation
+ 
+ 
+[Version] 
+Signature = "$Windows NT$" 
+Class = Media
+ClassGuid = {4d36e96c-e325-11ce-bfc1-08002be10318} 
+Provider=%ROSSI% 
+CatalogFile=catalog.cat
+DriverVer= 11/03/2005,4.1.0.2
+
+[DestinationDirs] 
+rgbt8xx_Video.Files.x86_12 = 12 
+rgbt8xx_Audio.Files.x86_12 = 12 
+
+[SourceDisksNames.x86]
+0=%Desc_x860%
+
+[SourceDisksFiles.x86]
+RGBT8XX.sys=0,, 
+
+[Manufacturer] 
+%ROSSI%=ROSSI
+
+[ROSSI]
+%rgbt8xx_VideoDesc_Bt848%=rgbt8xx_Video_Inst,PCI\VEN_109E&DEV_0350
+%rgbt8xx_VideoDesc_Bt849%=rgbt8xx_Video_Inst,PCI\VEN_109E&DEV_0351
+%rgbt8xx_VideoDesc_Bt878%=rgbt8xx_Video_Inst,PCI\VEN_109E&DEV_036E
+%rgbt8xx_VideoDesc_Bt879%=rgbt8xx_Video_Inst,PCI\VEN_109E&DEV_036F
+
+%rgbt8xx_AudioDesc_Bt878%=rgbt8xx_Audio_Inst,PCI\VEN_109E&DEV_0878
+%rgbt8xx_AudioDesc_Bt879%=rgbt8xx_Audio_Inst,PCI\VEN_109E&DEV_0879
+
+[rgbt8xx_Video_Inst.ntx86] 
+CopyFiles = rgbt8xx_Video.Files.x86_12 
+
+[rgbt8xx_Video_Inst.ntx86.Services] 
+AddService = rgbt848,0x00000002,rgbt8xx_Video_Service_Instx86, rgbt8xx_Video_EventLog_Inst 
+
+[rgbt8xx_Video_Service_Instx86] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\RGBT8XX.sys 
+
+
+;[rgbt8xx_Video_Inst.ntx86.Interfaces] 
+;AddInterface ={669C26A6-1300-4824-9097-9DF6BB27F000},IVideoBT,rgbt8xx_Videontx86Interface0
+;[rgbt8xx_Videontx86Interface0]
+
+[rgbt8xx_Video.Files.x86_12] 
+RGBT8XX.sys
+
+[rgbt8xx_Video_EventLog_Inst] 
+AddReg = rgbt8xx_Video_EventLog_Inst.AddReg 
+ 
+[rgbt8xx_Video_EventLog_Inst.AddReg] 
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll" 
+HKR,,TypesSupported,%REG_DWORD%,7
+
+
+;
+; Audio block
+;
+[rgbt8xx_Audio_Inst.ntx86] 
+CopyFiles = rgbt8xx_Audio.Files.x86_12 
+
+;
+;!!!!!!!!!!!!!!!!!!
+;
+[rgbt8xx_Audio_Inst.ntx86.Services] 
+AddService = rgbt848,0x00000002,rgbt8xx_Audio_Service_Instx86, rgbt8xx_Audio_EventLog_Inst
+
+[rgbt8xx_Audio_Service_Instx86] 
+ServiceType = %SERVICE_KERNEL_DRIVER% 
+StartType = %SERVICE_DEMAND_START% 
+ErrorControl = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\RGBT8XX.sys 
+
+
+;[rgbt8xx_Audio_Inst.ntx86.Interfaces] 
+;AddInterface ={02F0D52C-A8EE-43a8-80FF-723B960D80DE},IAudioBT,rgbt8xx_Audiontx86Interface0
+;[rgbt8xx_Audiontx86Interface0]
+
+[rgbt8xx_Audio.Files.x86_12] 
+RGBT8XX.sys
+
+[rgbt8xx_Audio_EventLog_Inst] 
+AddReg = rgbt8xx_Audio_EventLog_Inst.AddReg 
+ 
+[rgbt8xx_Audio_EventLog_Inst.AddReg] 
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll" 
+HKR,,TypesSupported,%REG_DWORD%,7
+
+
+[Strings] 
+
+;  *******Localizable Strings******* 
+ROSSI = "PENTACON Corporation" 
+Desc_x860 = "PENTACON Corporation Multimedia driver"
+rgbt8xx_VideoDesc_Bt848 = "PENTACON Generic Bt848 Video Capture Device"
+rgbt8xx_VideoDesc_Bt849 = "PENTACON Generic Bt849 Video Capture Device"
+rgbt8xx_VideoDesc_Bt878 = "PENTACON Generic Bt878 Video Capture Device"
+rgbt8xx_VideoDesc_Bt879 = "PENTACON Generic Bt879 Video Capture Device"
+rgbt8xx_AudioDesc_Bt878 = "PENTACON Generic Bt878 Audio Capture Device"
+rgbt8xx_AudioDesc_Bt879 = "PENTACON Generic Bt879 Audio Capture Device"
+
+;  *******Non Localizable Strings******* 
+
+SERVICE_BOOT_START = 0x0 
+SERVICE_SYSTEM_START = 0x1 
+SERVICE_AUTO_START = 0x2 
+SERVICE_DEMAND_START = 0x3 
+SERVICE_DISABLED = 0x4 
+
+SERVICE_KERNEL_DRIVER = 0x1 
+SERVICE_ERROR_IGNORE = 0x0 
+SERVICE_ERROR_NORMAL = 0x1 
+SERVICE_ERROR_SEVERE = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+
+REG_EXPAND_SZ = 0x00020000 
+REG_DWORD = 0x00010001 

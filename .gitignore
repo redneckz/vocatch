@@ -1,0 +1,76 @@
+log/*
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*target*
+*.jar
+*.war
+*.ear
+*.class
+
+# Eclipse specific
+*.pydevproject
+.project
+.project_initial
+.cproject
+.cdtproject
+.cdtbuild_initial
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+Debug/
+Release/
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# NetBeans specific
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+configurations.xml
+project.xml
+.dep.inc
+Makefile
+manifest.mf
+build.xml
+
+# Exceptions
+!/stuff
+!/stuff/**

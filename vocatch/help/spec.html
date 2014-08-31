@@ -1,0 +1,165 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="common.css" rel="stylesheet">
+</head>
+<body>
+<a href="index.html">[Главная]</a>
+<h2>9. Особенности ПО</h2>
+<h3>9.1. Формат файла поправок с временными метками</h3>
+<table border="1">
+	<tr>
+		<td>Временная метка 0 (8 байта)</td>
+		<td>N0 – число поправок (2 байта)</td>
+		<td>Поправка 1 (2 байта)</td>
+		<td>Смещение 1 (2 байта)</td>
+		<td>Поправка 2 (2 байта)</td>
+		<td>Смещение 2 (2 байта)</td>
+		<td>...</td>
+		<td>Поправка N0 (2 байта)</td>
+		<td>Смещение N0 (2 байта)</td>
+	</tr>
+	<tr>
+		<td colspan="9" class="center">.........................</td>
+	</tr>
+	<tr>
+		<td>Временная метка M (8 байта)</td>
+		<td>NM – число поправок (2 байта)</td>
+		<td>Поправка 1 (2 байта)</td>
+		<td>Смещение 1 (2 байта)</td>
+		<td>Поправка 2 (2 байта)</td>
+		<td>Смещение 2 (2 байта)</td>
+		<td>...</td>
+		<td>Поправка NM (2 байта)</td>
+		<td>Смещение NM (2 байта)</td>
+	</tr>
+</table>
+<h3>9.2. Библиотека удалённого управления КУП</h3>
+<p class="left">Далее все пути указываются относительно каталога
+&quot;.\src\vocatch-workspace\com-center\src&quot;. Библиотека
+представлена исходными файлами, написанными на языке ANSI C++ с
+использованием STL. Список файлов:</p>
+<ol>
+	<li>voc-ex/com-center.h</li>
+	<li>voc-ex/pop-element.h</li>
+	<li>voc-ex/raw-pop-adapter.h</li>
+	<li>voc-ex/voc-ex.h</li>
+</ol>
+<p class="left">Каждый файл библиотеки это описание определённого
+класса. Список классов:</p>
+<ol>
+	<li>ComCenter</li>
+	<li>POPElement</li>
+	<li>RawPOPAdapter</li>
+</ol>
+<p class="left">Для подключения библиотеки:</p>
+<pre>
+	/*
+	 * подключение классов voc-ex
+	 */
+	#include "./voc-ex/voc-ex.h"
+	/*
+	 * подключение пространства имён voc-ex
+	 */
+	using namespace vocex;</pre>
+<h3>9.2.1 Класс ComCenter</h3>
+<p class="left">Объекты класса ComCenter предоставляют
+функциональность для удалённого управления КУП по протоколу UDP. Для
+создания объекта необходимо передать IP адрес соответствующей машины
+КУП:</p>
+<pre>
+	ComCenter c(192, 168, 0, 1);
+	c.sendPrepare();</pre>
+<p class="left">Для запуска цикла обработки необходимо вызвать метод
+sendStart:</p>
+<pre>
+	c.sendStart();</pre>
+<p class="left">Для учёта временных меток, необходимо знать
+абсолютный момент времени, в который была отправлена команда пуска.
+Следующий фрагмент кода должен быть исполнен до вызова метода sendStart:
+</p>
+<pre>
+	time_t tsecs = 0;
+	SYSTEMTIME dtmillis;
+	time(&amp;tsecs);
+	GetSystemTime(&amp;dtmillis);
+	unsigned long long startTime =
+		(unsigned long long) tsecs * 1000 + dtmillis.wMilliseconds;</pre>
+<p class="left">Таким образом, переменная startTime в последнем
+куске кода будет хранить в себе абсолютное время посылки команды запуска
+цикла (в миллисекундах). Если системные часы на управляющей машине и
+машине КУП синхронизированы, то это время можно использовать для сдвига
+поправок.</p>
+<p class="left">Для остановки набора кадров необходимо вызвать метод
+sendStop:</p>
+<pre>
+	/*
+	 * буфер для хранения данных из файла
+	 */
+	vector&lt;unsigned char&gt; rawPOPData;
+	/*
+	 * строка для хранения имени варианта
+	 */
+	string variant;
+	/*
+	 * команда остановки КУП
+	 */
+	c.sendStop(rawPOPData, variant);</pre>
+<p class="left">Остановка набора кадров происходит через
+определённый временной интервал. Приведённый фрагмент кода позволяет
+синхронизировать остановку набора кадров на машинах, то есть вызов
+метода sendStop &quot;замораживается&quot; до момента реального
+завершения цикла на машине КУП. После завершения метод возвращает данные
+о поправках в первый аргумент (в примере - переменная rawPOPData) и имя
+варианта во втрой (в примере - переменная variant).</p>
+<h3>9.2.2 Класс POPElement</h3>
+<p class="left">Данный класс является вспомогательным и предназначен
+для хранения данных о поправках (угол, смещение, временная метка).</p>
+<h3>9.2.3 Класс RawPOPAdapter</h3>
+<p class="left">Объекты данного класса позволяют адаптировать массив
+поправок к массиву объектов класса POPElement. Доступ к адаптированному
+массиву можно производить по временным меткам (временные метки
+предварительного преобразования не проходят). Далее приводится пример:</p>
+<pre>
+	/*
+	 *  указатель на сырые данные прочитанные из файла
+	 */
+	vector&lt;unsigned char&gt;::pointer rawPOPDataPointer = &amp;rawPOPData.front();
+	/*
+	 *  объект класса RawPOPAdapter
+	 */
+	RawPOPAdapter adapter;
+	/*
+ 	 *  адаптация
+ 	 */
+	adapter.adapt(rawPOPDataPointer, rawPOPData.size(), true);
+	/*
+ 	 *  вывод временной метки посылки команды пуска и
+ 	 *  имени текущего варианта
+ 	 */
+	cout &lt;&lt; "Start command send time-point:" &lt;&lt; startTime &lt;&lt; endl;
+	cout &lt;&lt; "Variant: " &lt;&lt; variant &lt;&lt; endl;
+	/*
+ 	 *  вывод всех реальных записей в файле поправок
+ 	 */
+	map&lt;unsigned long long, POPElement&gt; els = adapter.getRealPOPElementsMap();
+	map&lt;unsigned long long, POPElement&gt;::iterator elsI = els.begin();
+	for (; elsI != els.end(); elsI++) {
+		POPElement&amp; el = elsI-&gt;second;
+		cout &lt;&lt; el.toString() &lt;&lt; endl;
+	}
+	cout &lt;&lt; "---------------------------" &lt;&lt; endl;
+	/*
+ 	 *  вывод первой и последней временных меток
+ 	 */
+	cout &lt;&lt; adapter.getStartTime() &lt;&lt; '-' &lt;&lt; adapter.getEndTime() &lt;&lt; endl;
+	/*
+ 	 *  вывод интерполированной поправки по временной метке
+ 	 */
+	cout &lt;&lt; "---------------------------" &lt;&lt; endl;
+	POPElement el = adapter.getPOPElement(adapter.getStartTime() + 40);
+	cout &lt;&lt; el.toString() &lt;&lt; endl;
+</pre>
+<a href="index.html">[Главная]</a>
+</body>
+</html>

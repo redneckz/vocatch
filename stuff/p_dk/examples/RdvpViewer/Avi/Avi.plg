@@ -1,0 +1,299 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Avi - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Avi.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\Avi.rc"" 
+Creating temporary file "c:\Temp\RSP1EF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/Avi.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\Avi.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\AviMan.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\LoopBack.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\OptionsDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1EF.tmp" 
+Creating temporary file "c:\Temp\RSP1F0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/Avi.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1F0.tmp" 
+Creating temporary file "c:\Temp\RSP1F1.tmp" with contents
+[
+vfw32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Avi.pdb" /debug /machine:I386 /def:".\Avi.def" /out:"..\bin\Debug\Avi.dll" /implib:"Debug/Avi.lib" /pdbtype:sept 
+".\Debug\Avi.obj"
+".\Debug\AviMan.obj"
+".\Debug\LoopBack.obj"
+".\Debug\OptionsDialog.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Avi.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP1F1.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Avi.cpp
+AviMan.cpp
+LoopBack.cpp
+OptionsDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+   Creating library Debug/Avi.lib and object Debug/Avi.exp
+
+
+
+<h3>Results</h3>
+Avi.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Avi - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Avi.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\Avi.rc"" 
+Creating temporary file "c:\Temp\RSP1F5.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/Avi.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\Avi.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\AviMan.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\LoopBack.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\OptionsDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1F5.tmp" 
+Creating temporary file "c:\Temp\RSP1F6.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/Avi.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Avi\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1F6.tmp" 
+Creating temporary file "c:\Temp\RSP1F7.tmp" with contents
+[
+vfw32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/avi.pdb" /machine:I386 /def:".\Avi.def" /out:"..\bin\release\avi.dll" /implib:"Release/avi.lib" 
+".\Release\Avi.obj"
+".\Release\AviMan.obj"
+".\Release\LoopBack.obj"
+".\Release\OptionsDialog.obj"
+".\Release\StdAfx.obj"
+".\Release\Avi.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP1F7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Avi.cpp
+AviMan.cpp
+LoopBack.cpp
+OptionsDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+   Creating library Release/avi.lib and object Release/avi.exp
+
+
+
+<h3>Results</h3>
+avi.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Capture - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/Capture.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Capture.rc"" 
+Creating temporary file "c:\Temp\RSP1FB.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/Capture.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Capture.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Grabber.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\OptionDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1FB.tmp" 
+Creating temporary file "c:\Temp\RSP1FC.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /FR"Debug/" /Fp"Debug/Capture.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP1FC.tmp" 
+Creating temporary file "c:\Temp\RSP1FD.tmp" with contents
+[
+..\..\..\lib\rvcl.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Capture.pdb" /debug /machine:I386 /def:".\Capture.def" /out:"..\bin\Debug\Capture.dll" /implib:"Debug/Capture.lib" /pdbtype:sept 
+".\Debug\Capture.obj"
+".\Debug\Grabber.obj"
+".\Debug\OptionDialog.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Capture.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP1FD.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Capture.cpp
+Grabber.cpp
+OptionDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+   Creating library Debug/Capture.lib and object Debug/Capture.exp
+
+
+
+<h3>Results</h3>
+Capture.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Capture - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/Capture.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Capture.rc"" 
+Creating temporary file "c:\Temp\RSP201.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/Capture.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Capture.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\Grabber.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\OptionDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP201.tmp" 
+Creating temporary file "c:\Temp\RSP202.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/Capture.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\Capture\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP202.tmp" 
+Creating temporary file "c:\Temp\RSP203.tmp" with contents
+[
+..\..\..\lib\rvcl.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/capture.pdb" /machine:I386 /def:".\Capture.def" /out:"..\bin\release\capture.dll" /implib:"Release/capture.lib" 
+".\Release\Capture.obj"
+".\Release\Grabber.obj"
+".\Release\OptionDialog.obj"
+".\Release\StdAfx.obj"
+".\Release\Capture.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP203.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Capture.cpp
+Grabber.cpp
+OptionDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+   Creating library Release/capture.lib and object Release/capture.exp
+
+
+
+<h3>Results</h3>
+capture.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RdvpViewerMain - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Debug/RdvpViewerMain.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\RdvpViewerMain.rc"" 
+Creating temporary file "c:\Temp\RSP207.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_WIN32_DCOM" /FR"Debug/" /Fp"Debug/RdvpViewerMain.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\Codec.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\DrawWindow.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\MainApp.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\RdvpViewerDlg.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\SourceDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP207.tmp" 
+Creating temporary file "c:\Temp\RSP208.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_WIN32_DCOM" /FR"Debug/" /Fp"Debug/RdvpViewerMain.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP208.tmp" 
+Creating temporary file "c:\Temp\RSP209.tmp" with contents
+[
+..\..\..\lib\rdvp.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/RdvpViewer.pdb" /debug /machine:I386 /out:"..\bin\debug\RdvpViewer.exe" /pdbtype:sept 
+".\Debug\Codec.obj"
+".\Debug\DrawWindow.obj"
+".\Debug\MainApp.obj"
+".\Debug\RdvpViewerDlg.obj"
+".\Debug\SourceDialog.obj"
+".\Debug\StdAfx.obj"
+".\Debug\RdvpViewerMain.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP209.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Codec.cpp
+DrawWindow.cpp
+MainApp.cpp
+RdvpViewerDlg.cpp
+SourceDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+RdvpViewer.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: RdvpViewerMain - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/RdvpViewerMain.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\RdvpViewerMain.rc"" 
+Creating temporary file "c:\Temp\RSP20B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/RdvpViewerMain.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\Codec.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\DrawWindow.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\MainApp.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\RdvpViewerDlg.cpp"
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\SourceDialog.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP20B.tmp" 
+Creating temporary file "c:\Temp\RSP20C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/RdvpViewerMain.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\Rossi Developer Kit\examples\RdvpViewer\RdvpViewerMain\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @c:\Temp\RSP20C.tmp" 
+Creating temporary file "c:\Temp\RSP20D.tmp" with contents
+[
+..\..\..\lib\rdvp.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/RdvpViewer.pdb" /machine:I386 /out:"..\bin\release\RdvpViewer.exe" 
+".\Release\Codec.obj"
+".\Release\DrawWindow.obj"
+".\Release\MainApp.obj"
+".\Release\RdvpViewerDlg.obj"
+".\Release\SourceDialog.obj"
+".\Release\StdAfx.obj"
+".\Release\RdvpViewerMain.res"
+]
+Creating command line "xilink6.exe @c:\Temp\RSP20D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Codec.cpp
+DrawWindow.cpp
+MainApp.cpp
+RdvpViewerDlg.cpp
+SourceDialog.cpp
+Generating Code...
+Linking...
+xilink6: executing 'C:\PROGRA~1\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+RdvpViewer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
